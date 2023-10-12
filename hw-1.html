@@ -12,8 +12,10 @@
     <style>
       .container {
         display: flex;
+        height: 100vh;
       }
       .spinner {
+        margin: auto;
       }
       .spinner-text {
         font-family: "Courier New", Courier, monospace;
@@ -21,6 +23,7 @@
         text-transform: uppercase;
         animation: blink 2s;
         animation-iteration-count: infinite;
+        transition-timing-function: linear;
       }
       .rect {
         background-color: black;
@@ -28,7 +31,7 @@
         height: 4px;
         border-radius: 2px;
         animation: move 2s;
-        animation: blink;
+        animation: blink 2s;
       }
       @keyframes moving {
         from {
