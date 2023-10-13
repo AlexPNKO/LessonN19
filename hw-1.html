@@ -16,6 +16,7 @@
       }
       .spinner {
         margin: auto;
+        position: relative;
       }
       .spinner-text {
         font-family: "Courier New", Courier, monospace;
@@ -30,10 +31,12 @@
         width: 10px;
         height: 4px;
         border-radius: 2px;
-        animation: move 2s;
-        animation: blink 2s;
+        animation: move 2s, blink 2s;
+        position: absolute;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
-      @keyframes moving {
+      @keyframes move {
         from {
           left: 0;
           opacity: 1;
@@ -43,7 +46,7 @@
         }
       }
 
-      @keyframes blinking {
+      @keyframes blink {
         0% {
           opacity: 0;
         }
